@@ -1,0 +1,7 @@
+<?php $reasons = array("password" => "Wrong Username or Password", "noexist" => "Thats username does not exist", "noactive" => "Thats username is not active", "nomatch" => "That username and password does not match", "blank" => "You have left one or more fields blank."); if ($_GET["loginFailed"]) echo '<div class="error_report"><ul><li style="list-style:none;">' . $reasons[$_GET["reason"]] .'</li></ul></div>'; ?>
+
+<?php $regi_error = array("emptyRegi" => "you didnt submit anything? try again.", "usernameExists" => "That username is already taken", "postcodeSpaces" => "you cannot contain spaces in your postcode <strong>example: AB10</strong>", "usernameSpaces" => "That username has spaces in it.", "passwordMust" => "your password must be at least 7 characters", "passwordMatch" => "Your passwords do not match", "tandc" => "you did not expect our terms and conditions"); if ($_GET["regiFailed"]) echo '<div class="error_report"><ul><li style="list-style:none;">' . $regi_error[$_GET["reason"]] .'</li></ul></div>'; ?>
+
+<?php $reasons = array("loggedOut" => "You was logged out", "didntlogout" => "you wasn't logged out"); if ($_GET["loggedout"]) echo '<div class="error_report"><ul><li style="list-style:none;">' . $reasons[$_GET["reason"]] .'</li></ul></div>'; ?>
+
+<?php $reasons = array("loggedIn" => "You was logged In", "didntlogin" => "you wasn't logged in"); if ($_GET["loggedin"]) echo '<div class="error_report"><ul><li style="list-style:none;">' . $reasons[$_GET["reason"]] .'</li></ul></div>'; ?>
